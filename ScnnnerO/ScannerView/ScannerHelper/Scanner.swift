@@ -11,8 +11,8 @@ import SwiftUI
 struct QRScanner: UIViewControllerRepresentable {
 	@Binding var result: String
 	
-	func makeCoordinator() -> Coordinator {
-		Coordinator($result)
+	func makeCoordinator() -> ScannerCoordinator {
+		ScannerCoordinator($result)
 	}
 	
 	func makeUIViewController(context: Context) -> QRScannerController {
@@ -77,7 +77,7 @@ class QRScannerController: UIViewController {
 	}
 }
 
-class Coordinator: NSObject, AVCaptureMetadataOutputObjectsDelegate {
+class ScannerCoordinator: NSObject, AVCaptureMetadataOutputObjectsDelegate {
  
 	@Binding var scanResult: String
  
@@ -86,17 +86,11 @@ class Coordinator: NSObject, AVCaptureMetadataOutputObjectsDelegate {
 	}
  
 	func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
- 
-		// Check if the metadataObjects array is not nil and it contains at least one object.
-		if metadataObjects.count == 0 {
-			scanResult = "No QR code detected"
+		if metadataObjects.count == 0 { 
+			scanResult = ""
 			return
 		}
- 
-		// Get the metadata object.
 		let metadataObj = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
- 
-//		if metadataObj.type == AVMetadataObject.ObjectType.qr,
 		if let result = metadataObj.stringValue {
 			scanResult = result
 			print(scanResult)

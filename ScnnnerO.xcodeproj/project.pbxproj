@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96BFAAE82ADD1CBC001E4932 /* ImagePickerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFAAE72ADD1CBC001E4932 /* ImagePickerHelper.swift */; };
+		96BFAAEA2ADD298E001E4932 /* ScannerInMemoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BFAAE92ADD298E001E4932 /* ScannerInMemoryStore.swift */; };
 		96D0BD432ADCF53E00E09798 /* ScnnnerOApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D0BD422ADCF53E00E09798 /* ScnnnerOApp.swift */; };
 		96D0BD472ADCF54000E09798 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96D0BD462ADCF54000E09798 /* Assets.xcassets */; };
 		96D0BD4A2ADCF54000E09798 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96D0BD492ADCF54000E09798 /* Preview Assets.xcassets */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		96BFAAE72ADD1CBC001E4932 /* ImagePickerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerHelper.swift; sourceTree = "<group>"; };
+		96BFAAE92ADD298E001E4932 /* ScannerInMemoryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerInMemoryStore.swift; sourceTree = "<group>"; };
 		96D0BD3F2ADCF53E00E09798 /* ScnnnerO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScnnnerO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96D0BD422ADCF53E00E09798 /* ScnnnerOApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScnnnerOApp.swift; sourceTree = "<group>"; };
 		96D0BD462ADCF54000E09798 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -77,6 +81,7 @@
 				96D0BD572ADCF8BC00E09798 /* ScannerHelper */,
 				96D0BD512ADCF69C00E09798 /* ScannerView.swift */,
 				96D0BD552ADCF7B400E09798 /* ScannerViewModel.swift */,
+				96BFAAE92ADD298E001E4932 /* ScannerInMemoryStore.swift */,
 			);
 			path = ScannerView;
 			sourceTree = "<group>";
@@ -85,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				96D0BD582ADCF8FC00E09798 /* Scanner.swift */,
+				96BFAAE72ADD1CBC001E4932 /* ImagePickerHelper.swift */,
 			);
 			path = ScannerHelper;
 			sourceTree = "<group>";
@@ -159,9 +165,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96BFAAEA2ADD298E001E4932 /* ScannerInMemoryStore.swift in Sources */,
 				96D0BD432ADCF53E00E09798 /* ScnnnerOApp.swift in Sources */,
 				96D0BD562ADCF7B400E09798 /* ScannerViewModel.swift in Sources */,
 				96D0BD592ADCF8FC00E09798 /* Scanner.swift in Sources */,
+				96BFAAE82ADD1CBC001E4932 /* ImagePickerHelper.swift in Sources */,
 				96D0BD522ADCF69C00E09798 /* ScannerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,6 +308,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = UseCamera;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = Test;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = Test;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -333,6 +343,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = UseCamera;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = Test;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = Test;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
